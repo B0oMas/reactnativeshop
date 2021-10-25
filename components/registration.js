@@ -7,8 +7,7 @@ import{
     TouchableOpacity,
 } from 'react-native';
 
-export default class Registration extends React.Component {
-    render(){
+export default function Registration ({navigation}) {
       return (
         <View style={styles.register}>
             <Text style={styles.header}>Register</Text>
@@ -26,12 +25,12 @@ export default class Registration extends React.Component {
             secureTextEntry={true} underlineColorAndroid={'transparent'} />
             <TextInput style={styles.textinput} placeholder="Confirm your password"
             secureTextEntry={true} underlineColorAndroid={'transparent'} />
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
                 <Text style={styles.btntext}>Create your account</Text>
             </TouchableOpacity>
         </View>
       );
-    }
+    
   }
 
   const styles = StyleSheet.create({

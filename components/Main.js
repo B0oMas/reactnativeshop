@@ -3,24 +3,21 @@ import{
     StyleSheet,
     Text,
     View,
-    TextInput,
-    TouchableOpacity,
+    TouchableOpacity
 } from 'react-native';
 
-export default class Main extends React.Component {
-    render(){
+export default function Main({ navigation })  {
         return (
             <View style={styles.main}>
-                <Text style={styles.header}>Main menu</Text>
-                <TouchableOpacity style={styles.button}>
+        
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
                 <Text style={styles.btntext}>Log in</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Registratin')}>
                 <Text style={styles.btntext}>Sign up</Text>
                 </TouchableOpacity>
             </View>
         );
-    }
 }
 
 const styles = StyleSheet.create({

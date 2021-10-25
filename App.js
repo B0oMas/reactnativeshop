@@ -1,34 +1,17 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-  Colors,
-} from 'react-native';
+import {StyleSheet} from 'react-native';
+import ManoNavigator from './Navigator'
 
-import Registration from './components/Registration';
-import Login from './components/Login';
-import Main from './components/Main';
 
-export default class App extends React.Component {
-  render(){
+export default function App(){
+
     return(
-      <View style={styles.container}>
-        <Main />
-        {/* <Registration />  
-        <Login /> */}
-      </View>
+    <ManoNavigator />
     );
-  }
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      backgroundColor: '#36485f',
-      paddingLeft: 60,
-      paddingRight: 60,
-    }
-});
+ 
+})
+
+
